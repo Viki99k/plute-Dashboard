@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Language</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="lang.js"></script>
+    <link rel="stylesheet" href="lang.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+      
+        const firebaseConfig = {
+       apiKey: "AIzaSyB4Po_GC3uih62QXM6KuTUqVOm1UH-SuWA",
+       authDomain: "web-new-401cb.firebaseapp.com",
+       projectId: "web-new-401cb",
+       storageBucket: "web-new-401cb.appspot.com",
+       messagingSenderId: "326958372871",
+       appId: "1:326958372871:web:d6135d15cde471ec7eb2a2"
+     };
+     firebase.initializeApp(firebaseConfig);
+    });
+
+    window.onload = function() {
+    displayLanguageData();
+};
+   </script>
+    <div class="navbar">
+        <nav>
+            <a href="../home/home.html">Home</a>
+            <a href="../lang/lang.html">Language</a>
+            <a href="../tech/tech.html">Tech</a>
+            <a href="../framework/framework.html">Framework</a>
+            <a href="../database/database.html">Database</a>
+            <a href="#" id="logout-link">Logout</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Add New Language</h1>
+        <form id="languageForm" action="#" method="post" enctype="multipart/form-data">
+            <label for="language-name">Language:</label>
+            <input type="text" id="language-name" name="language">
+
+            <label for="language-desc">Description:</label>
+            <input type="text" id="language-desc" name="description">
+
+            <label for="language-uses">Uses:</label>
+            <input type="text" id="language-uses" name="uses">
+
+            <label for="coreroadmap">Image:</label>
+            <input type="file" id="coreroadmap" name="image" onchange="previewImage(event)">
+            <br>
+            <img id="img-preview" src="#" alt="Image Preview">
+            <br>
+            <input type="button" onclick="saveLanguage()" value="Add Language">
+        </form>
+        
+            <div class="language-list" id="language-list">
+                <!-- Language items will be appended here -->
+            </div>
+        
+    </div>
+   
+</body>
+</html>

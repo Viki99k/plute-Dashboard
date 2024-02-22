@@ -1,0 +1,35 @@
+.edit-language-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-language-container h2 {
+    margin-bottom: 20px;
+}
+
+.edit-language-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.edit-language-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.edit-language-container input[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-language-container input[type="button"]:hover {
+    background-color: #45a049;
+}

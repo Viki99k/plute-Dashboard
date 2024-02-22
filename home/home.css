@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    /* height: 100vh; */
+    background-color: white;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: blueviolet;
+    color: white;
+    height: 100rem; 
+    width: 10rem;
+    padding: 20px 0; /* Adjust padding */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px; /* Adjust padding */
+    display: block;
+    margin-bottom: 10px;/* Add margin to separate links */
+    font-size: x-large;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: wheat;
+}
+.content p {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
+}

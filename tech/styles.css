@@ -1,0 +1,52 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Image container styles */
+.image-container {
+  margin-top: 20px;
+}
+
+.image-item {
+  width: 200px; /* Set width for each image container */
+  height: 200px; /* Set height for each image container */
+  margin-right: 20px; /* Margin between image containers */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+  display: inline-block; /* Display as inline block */
+  vertical-align: top; /* Align to the top */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.image-item img {
+  width: 100px; /* Make the image fill the container */
+  height: 100px; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image covers the container */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+    <link rel="stylesheet" href="tech.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyB4Po_GC3uih62QXM6KuTUqVOm1UH-SuWA",
+                authDomain: "web-new-401cb.firebaseapp.com",
+                projectId: "web-new-401cb",
+                storageBucket: "web-new-401cb.appspot.com",
+                messagingSenderId: "326958372871",
+                appId: "1:326958372871:web:d6135d15cde471ec7eb2a2"
+            };
+            firebase.initializeApp(firebaseConfig);
+        });
+
+        window.onload = function () {
+            displayTechnologyData();
+        };
+    </script>
+
+
+    <div class="navbar">
+        <nav>
+            <a href="../home/home.html">Home</a>
+            <a href="../lang/lang.html">Language</a>
+            <a href="../tech/tech.html">Tech</a>
+            <a href="../framework/framework.html">Framework</a>
+            <a href="../database/database.html">Database</a>
+            <a href="#" id="logout-link">Logout</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>Add New Technology</h1>
+        <form id="technologyForm" action="#" method="post" enctype="multipart/form-data">
+            <label for="technology-name">Name:</label>
+            <input type="text" id="technology-name" name="name">
+
+            <label for="technology-desc">Description:</label>
+            <input type="text" id="technology-desc" name="description">
+
+            <label for="technology-languages">Languages Used:</label>
+            <input type="text" id="technology-languages" name="languagesUsed">
+
+            <label for="technology-frameworks">Frameworks Used:</label>
+            <input type="text" id="technology-frameworks" name="frameworksUsed">
+
+            <label for="technology-images">Images:</label>
+            <input type="file" id="technology-images" name="images" onchange="previewImages(event)" multiple>
+            <br>
+            <div id="images-preview"></div> <!-- Display image previews here -->
+            <br>
+            <input type="button" onclick="saveTechnology()" value="Add Technology">
+        </form>
+
+
+        <div id="technology-list">
+            <!-- Technology items will be appended here -->
+        </div>
+
+    </div>
+  
+    <script src="tech.js"></script>
+</body>
+
+</html>

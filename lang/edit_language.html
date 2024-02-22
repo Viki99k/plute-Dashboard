@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Language</title>
+    <link rel="stylesheet" href="edit_language.css">
+</head>
+<body>
+    <div class="edit-language-container">
+        <h2>Edit Language</h2>
+        <form id="edit-language-form">
+            <label for="language-name">Language Name:</label>
+            <input type="text" id="language-name" name="name">
+
+            <label for="language-desc">Language Description:</label>
+            <input type="text" id="language-desc" name="description">
+
+            <label for="language-uses">Language Uses:</label>
+            <input type="text" id="language-uses" name="uses">
+
+            <input type="button" onclick="updateLanguage()" value="Save Changes">
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const firebaseConfig = {
+       apiKey: "AIzaSyB4Po_GC3uih62QXM6KuTUqVOm1UH-SuWA",
+       authDomain: "web-new-401cb.firebaseapp.com",
+       projectId: "web-new-401cb",
+       storageBucket: "web-new-401cb.appspot.com",
+       messagingSenderId: "326958372871",
+       appId: "1:326958372871:web:d6135d15cde471ec7eb2a2"
+     };
+     firebase.initializeApp(firebaseConfig);
+    });
+
+  
+
+   </script>
+    <script src="edit_language.js"></script>
+</body>
+</html>
